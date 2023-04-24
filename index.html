@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Recognition</title>
+    <link rel="stylesheet" href="potree/build/potree/potree.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        #video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        #tooltip {
+            position: absolute;
+            z-index: 2;
+            /* ... other tooltip styles ... */
+        }
+        #capture-button {
+            position: absolute;
+            z-index: 3;
+            /* ... other button styles ... */
+        }
+    </style>
+</head>
+<body>
+    <video id="video" width="640" height="480" autoplay muted playsinline></video>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <div id="tooltip"></div>
+    <button id="capture-button" onclick="captureEnvironment()">Capture Environment</button>
+    <script src="potree/build/potree/potree.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
